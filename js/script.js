@@ -20,8 +20,14 @@ const newDepositTotal = previousDepositTotal + newDepositAmount;
 depositTotalElement.innerText = newDepositTotal;
 
 
+// 
+const balanceTotalElement = document.getElementById('total-balance');
+const previousBalanceTotalString = balanceTotalElement.innerText;
+const previousBalanceAmount = parseFloat(previousBalanceTotalString);
 
+const newBalanceTotal = previousBalanceAmount + newDepositAmount;
 
+balanceTotalElement.innerText = newBalanceTotal;
 
 
 
