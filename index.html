@@ -1,20 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Bank</title>
+    <title>Modern Functional Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <section>
 
+<body class="bg-indigo-300">
+    <header class="bg-sky-200 mt-12 p-6">
+        <section>
+            <h1 class="text-5xl text-center">Modern Functional Bank-<span class="text-blue-900 font-bold">Invest big,
+                    Earn Big.</span></h1>
         </section>
     </header>
     <main>
-        
+        <!-- balance and transaction summery -->
+        <section class="mt-12">
+            <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
+                <div class="bg-amber-200 p-8 rounded-lg">
+                    <h4 class="text-3xl">Deposit</h4>
+                    <h2 class="text-5xl">$ <span id="deposit-total">00</span></h2>
+                </div>
+                <div class="bg-lime-400 p-8 rounded-lg">
+                    <h4 class="text-3xl">Withdraw</h4>
+                    <h2 class="text-5xl text-white ">$<span id="withdraw-total">00</span></h2>
+                </div>
+                <div class="bg-indigo-400 p-8 rounded-lg">
+                    <h4 class="text-3xl">Balance</h4>
+                    <h2 class="text-5xl">$<span id="total-balance">1200</span></h2>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- deposit withdraw section-->
+        <section class="mt-12">
+            <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto ">
+                <div class="bg-fuchsia-300 p-8 rounded-lg">
+                    <h4 class="text-3xl text-white ">Please Deposit</h4>
+
+                    <input type="number" name="" placeholder="$ amount you want to deposit" id="deposit-input"
+                        class="w-9/12 block mb-2 px-2 mt-6 rounded-lg">
+                    <button id="btn-deposit" type="submit"
+                        class="bg-pink-600 px-8 py-2 text-white font-semibold rounded-lg hover:bg-sky-900">Submit</button>
+                </div>
+                <div class="bg-violet-400 p-8 rounded-lg">
+                    <h4 class="text-3xl text-white ">Please Withdraw</h4>
+
+                    <input type="number" name="" placeholder="$ amount you want to withdraw" id="withdraw-input "
+                        class="w-9/12 block mb-2 px-2 mt-6 rounded-lg">
+                    <button id="btn-withdraw" type="submit"
+                        class="bg-pink-600 px-8 py-2 text-white font-semibold rounded-lg hover:bg-sky-900">Submit</button>
+
+                </div>
+            </div>
+        </section>
+
     </main>
     <script src="js/script.js"></script>
 </body>
+
 </html>
